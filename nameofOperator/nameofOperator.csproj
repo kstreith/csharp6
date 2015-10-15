@@ -47,6 +47,7 @@
     <Compile Include="CSharp6.cs" />
     <Compile Include="CSharp5.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="NotifySampleViewModel.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
