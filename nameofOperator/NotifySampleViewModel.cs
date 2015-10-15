@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace nameof
+namespace nameofOperator
 {
     class NotifySampleViewModel : INotifyPropertyChanged
     {
