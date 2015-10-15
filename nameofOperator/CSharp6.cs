@@ -22,6 +22,7 @@ namespace nameofOperator
             return DetermineLocalityForAddress(current_cart.Customer.Addresses[0]);
         }
 
+        #region CSharp6 Working Code
         //public static string DetermineLocalityForOrder(ShoppingCart currentCart)
         //{
         //    if (currentCart == null)
@@ -38,6 +39,7 @@ namespace nameofOperator
         //    }
         //    return DetermineLocalityForAddress(currentCart.Customer.Addresses[0]);
         //}
+        #endregion
 
         public static string DetermineLocalityForAddress(Address address)
         {

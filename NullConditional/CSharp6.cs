@@ -37,6 +37,7 @@ namespace NullConditional
             return String.Join("\n", details.Where(x => !String.IsNullOrWhiteSpace(x)));
         }
 
+        #region CSharp6 Working Code
         //public static string FormatOrderDetails(ShoppingCart cart, double total)
         //{
         //    List<String> details = new List<String>();
@@ -57,5 +58,6 @@ namespace NullConditional
         //    details.Add(String.Format("{0:c}", total));
         //    return String.Join("\n", details.Where(x => !String.IsNullOrWhiteSpace(x)));
         //}
+        #endregion
     }
 }
