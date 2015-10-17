@@ -14,9 +14,9 @@ namespace StringInterpolation
             Console.WriteLine("Example #1");
             try
             {
-                CSharp5.ValidateCart(new ShoppingCart { Orders = new List<Order> { new Order { Quantity = -1, Name = "iWatch" }, new Order { Quantity = 500, Name = "USB Car Charger" }, new Order { Quantity = 2, Price = 550.00, Name = "Lumia Phone" } } });
+                CSharp5.ValidateCart(new ShoppingCart { Orders = new List<Order> { new Order { Quantity = 500, Name = "USB Car Charger" }, new Order { Quantity = 2, Price = 550.00, Name = "Lumia Phone" } } }, 5, 500);
                 Console.WriteLine("Failed");
-            } catch (ValidationException ve) when (ve?.Exceptions?.Count == 3) {
+            } catch (ValidationException ve) when (ve?.Exceptions?.Count == 2) {
                 Console.WriteLine("Passed");
                 foreach (var err in ve.Exceptions)
                 {
@@ -31,10 +31,10 @@ namespace StringInterpolation
             Console.WriteLine("Example #1");
             try
             {
-                CSharp5.ValidateCart(new ShoppingCart { Orders = new List<Order> { new Order { Quantity = -1, Name = "iWatch" }, new Order { Quantity = 500, Name = "USB Car Charger" }, new Order { Quantity = 2, Price = 550.00, Name = "Lumia Phone" } } });
+                CSharp6.ValidateCart(new ShoppingCart { Orders = new List<Order> { new Order { Quantity = 500, Name = "USB Car Charger" }, new Order { Quantity = 2, Price = 550.00, Name = "Lumia Phone" } } }, 5, 500);
                 Console.WriteLine("Failed");
             }
-            catch (ValidationException ve) when (ve?.Exceptions?.Count == 3)
+            catch (ValidationException ve) when (ve?.Exceptions?.Count == 2)
             {
                 Console.WriteLine("Passed");
                 foreach (var err in ve.Exceptions)
