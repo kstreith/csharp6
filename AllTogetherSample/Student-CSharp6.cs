@@ -88,8 +88,7 @@ namespace Immutable
     //        var newGpa = ((Gpa * Hours) + grade) / newHours;
     //        var newCourses = new List<Course>(Courses);
     //        newCourses.Add(course);
-    //        var updatedStudent = new Student_CSharp6(FirstName, LastName, newGpa, newHours, newCourses);
-    //        return StudentRepository.Instance.UpdateStudent(updatedStudent);
+    //        return StudentRepository.Instance.UpdateStudent(new Student_CSharp6(FirstName, LastName, newGpa, newHours, newCourses));
     //    }
     //}
     #endregion
