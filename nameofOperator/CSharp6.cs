@@ -5,45 +5,32 @@ namespace nameofOperator
 {
     class CSharp6
     {
-        public static string DetermineLocalityForOrder(ShoppingCart current_cart)
+        public static void MergeCarts(ShoppingCart current_cart, ShoppingCart other_cart)
         {
             if (current_cart == null)
             {
                 throw new ArgumentNullException("current_cart");
             }
-            if (current_cart.Customer == null)
+            if (other_cart == null)
             {
-                throw new ArgumentException("ShoppingCart must have a customer", "current_cart");
+                throw new ArgumentNullException("other_cart");
             }
-            if (current_cart.Customer.Addresses == null || !current_cart.Customer.Addresses.Any())
-            {
-                throw new ArgumentException("ShoppingCart must have a customer address", "current_cart");
-            }
-            return DetermineLocalityForAddress(current_cart.Customer.Addresses[0]);
+            // merge cart logic goes here...
         }
 
         #region CSharp6 Working Code
-        //public static string DetermineLocalityForOrder(ShoppingCart currentCart)
+        //public static void MergeCarts(ShoppingCart current_cart, ShoppingCart other_cart)
         //{
-        //    if (currentCart == null)
+        //    if (current_cart == null)
         //    {
-        //        throw new ArgumentNullException(nameof(currentCart));
+        //        throw new ArgumentNullException(nameof(current_cart));
         //    }
-        //    if (currentCart.Customer == null)
+        //    if (other_cart == null)
         //    {
-        //        throw new ArgumentException("ShoppingCart must have a customer", nameof(currentCart));
+        //        throw new ArgumentNullException(nameof(other_cart));
         //    }
-        //    if (currentCart.Customer.Addresses == null || !currentCart.Customer.Addresses.Any())
-        //    {
-        //        throw new ArgumentException("ShoppingCart must have a customer address", nameof(currentCart));
-        //    }
-        //    return DetermineLocalityForAddress(currentCart.Customer.Addresses[0]);
+        //    // merge cart logic goes here...
         //}
         #endregion
-
-        public static string DetermineLocalityForAddress(Address address)
-        {
-            return "Parcel2923-Raleigh-NC"; //FIXME
-        }
     }
 }

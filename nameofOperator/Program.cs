@@ -13,7 +13,7 @@ namespace nameofOperator
             Console.WriteLine("------------- CSharp5 ------------------");
             Console.WriteLine("Example #1");
             try {
-                CSharp5.DetermineLocalityForOrder(null);
+                CSharp5.MergeCarts(null, new ShoppingCart());
                 Console.WriteLine("Failed");
             }
             catch (ArgumentNullException e) {
@@ -25,22 +25,7 @@ namespace nameofOperator
             Console.WriteLine("Example #2");
             try
             {
-                CSharp5.DetermineLocalityForOrder(new ShoppingCart());
-                Console.WriteLine("Failed");
-            }
-            catch (ArgumentException e)
-            {
-                Console.WriteLine("Passed - exception thrown for argument '" + e.ParamName + "'");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Failed");
-            }
-            Console.WriteLine();
-            Console.WriteLine("Example #3");
-            try
-            {
-                CSharp5.DetermineLocalityForOrder(new ShoppingCart { Customer = new Customer { } });
+                CSharp5.MergeCarts(new ShoppingCart(), null);
                 Console.WriteLine("Failed");
             }
             catch (ArgumentException e)
@@ -57,7 +42,7 @@ namespace nameofOperator
             Console.WriteLine("Example #1");
             try
             {
-                CSharp6.DetermineLocalityForOrder(null);
+                CSharp6.MergeCarts(null, new ShoppingCart());
                 Console.WriteLine("Failed");
             }
             catch (ArgumentNullException e)
@@ -72,22 +57,7 @@ namespace nameofOperator
             Console.WriteLine("Example #2");
             try
             {
-                CSharp6.DetermineLocalityForOrder(new ShoppingCart());
-                Console.WriteLine("Failed");
-            }
-            catch (ArgumentException e)
-            {
-                Console.WriteLine("Passed - exception thrown for argument '" + e.ParamName + "'");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Failed");
-            }
-            Console.WriteLine();
-            Console.WriteLine("Example #3");
-            try
-            {
-                CSharp6.DetermineLocalityForOrder(new ShoppingCart { Customer = new Customer { } });
+                CSharp6.MergeCarts(new ShoppingCart(), null);
                 Console.WriteLine("Failed");
             }
             catch (ArgumentException e)

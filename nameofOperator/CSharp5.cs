@@ -8,26 +8,17 @@ namespace nameofOperator
 {
     class CSharp5
     {
-        public static string DetermineLocalityForOrder(ShoppingCart current_cart)
+        public static void MergeCarts(ShoppingCart current_cart, ShoppingCart other_cart)
         {
             if (current_cart == null)
             {
                 throw new ArgumentNullException("current_cart");
             }
-            if (current_cart.Customer == null)
+            if (other_cart == null)
             {
-                throw new ArgumentException("ShoppingCart must have a customer", "current_cart");
+                throw new ArgumentNullException("other_cart");
             }
-            if (current_cart.Customer.Addresses == null || !current_cart.Customer.Addresses.Any())
-            {
-                throw new ArgumentException("ShoppingCart must have a customer address", "current_cart");
-            }
-            return DetermineLocalityForAddress(current_cart.Customer.Addresses[0]);
-        }
-
-        public static string DetermineLocalityForAddress(Address address)
-        {
-            return "Parcel2923-Raleigh-NC"; //FIXME
+            // merge cart logic goes here...
         }
     }
 }
